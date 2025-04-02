@@ -1,0 +1,282 @@
+/* Basic Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4; /* Light background for the page */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.cv-container {
+    display: flex;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff; /* White background for the main content area */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Ensure it takes at least viewport height */
+}
+
+/* Sidebar (Left Column) */
+.sidebar {
+    flex-basis: 35%;
+    background-color: #209ca4; /* Teal color */
+    color: #ffffff;
+    padding: 30px 30px 30px 30px; /* Top, Right, Bottom, Left padding */
+    position: relative; /* Needed for pseudo-elements or absolute positioning if used */
+    padding-top: 0; /* Reset top padding for the header curve */
+}
+
+/* Curved Header Effect */
+.sidebar-header {
+    background-color: #209ca4; /* Match sidebar background */
+    padding-top: 30px; /* Space above the image */
+    margin-left: -30px; /* Extend to the edge */
+    margin-right: -30px; /* Extend to the edge */
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom-right-radius: 100px; /* The curve */
+    margin-bottom: 20px; /* Space below the curve */
+}
+
+.profile-pic {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    margin: 0 auto 20px auto; /* Center horizontally */
+    position: relative; /* To ensure it sits above the background */
+    z-index: 1;
+}
+
+/* Sidebar Text Styling */
+.sidebar h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sidebar .title {
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.sidebar h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); Optional separator */
+}
+
+.sidebar p, .sidebar span, .sidebar li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.sidebar section {
+    margin-bottom: 25px;
+}
+
+.sidebar .about-me p {
+    text-align: justify;
+}
+
+/* Skills Section */
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter background for bar */
+    border-radius: 4px;
+    overflow: hidden; /* Ensure level stays within bounds */
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #ffffff; /* White progress */
+    border-radius: 4px;
+}
+
+/* Contact Section */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    color: #ffffff;
+    margin-right: 10px;
+    width: 20px; /* Ensure consistent icon spacing */
+    text-align: center;
+}
+
+.contact-item span {
+    font-size: 0.9rem;
+}
+
+/* Languages Sections */
+.languages-fw p, .languages-spoken p {
+     margin-bottom: 5px; /* Less space between listed items */
+}
+
+
+/* Main Content (Right Column) */
+.main-content {
+    flex-basis: 65%;
+    padding: 30px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.main-content section {
+    margin-bottom: 30px;
+}
+
+.main-content hr {
+    border: 0;
+    height: 3px;
+    background-color: #209ca4; /* Teal separator */
+    margin-bottom: 20px; /* Space below HR before heading */
+    margin-top: 0; /* Space above HR */
+}
+
+.main-content h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #209ca4; /* Teal heading color */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Education Section */
+.education-entry {
+    margin-bottom: 25px;
+}
+
+.education-entry h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.education-entry h4 {
+    font-size: 0.95rem;
+    font-weight: 700; /* Making institution bold like title */
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.education-entry .dates {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.education-entry .details {
+    font-size: 0.9rem;
+    color: #444444;
+    margin-bottom: 3px; /* Smaller margin for details lines */
+}
+
+/* Hobbies Section */
+.hobbies-container {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+    text-align: center;
+}
+
+.hobby-item {
+    flex-basis: calc(25% - 20px); /* Adjust basis for roughly 4 items per row, allowing for gaps */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobby-item i {
+    font-size: 30px; /* Icon size */
+    color: #209ca4; /* Teal icons */
+    margin-bottom: 8px;
+}
+
+.hobby-item p {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+/* Placeholder for profile picture */
+.profile-pic[src="placeholder-profile.png"] {
+  background-color: #ccc; /* Simple gray background for placeholder */
+   /* You could add a simple icon font here too */
+}
+
+/* Basic Responsiveness (Optional - simple example) */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .sidebar, .main-content {
+        flex-basis: 100%;
+    }
+
+    .sidebar {
+        padding-bottom: 10px; /* Reduce padding when stacked */
+    }
+
+     .sidebar-header {
+        border-bottom-right-radius: 70px; /* Adjust curve */
+    }
+
+    .main-content {
+         padding: 20px;
+    }
+
+    .hobbies-container {
+        justify-content: center; /* Center items when stacked */
+    }
+
+    .hobby-item {
+        flex-basis: calc(50% - 20px); /* 2 hobbies per row */
+    }
+}
+
+@media (max-width: 480px) {
+     .sidebar h1 {
+        font-size: 1.8rem;
+    }
+     .sidebar .title {
+        font-size: 1rem;
+    }
+     .main-content h2 {
+        font-size: 1.1rem;
+    }
+    .hobby-item {
+        flex-basis: calc(100% - 20px); /* 1 hobby per row */
+    }
+}
